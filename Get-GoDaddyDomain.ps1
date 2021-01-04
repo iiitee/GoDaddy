@@ -46,7 +46,7 @@ function Get-GoDaddyDomain
         if ($Domain) {
             $uri = "https://api.godaddy.com/v1/domains/$Domain"
         } else {
-            $uri = "https://api.godaddy.com/v1/domains?limit=$Limit"
+            $uri = "https://api.godaddy.com/v1/domains?limit=$Limit&includes=nameServers"
         }
 
         #---- Make the request ----#
